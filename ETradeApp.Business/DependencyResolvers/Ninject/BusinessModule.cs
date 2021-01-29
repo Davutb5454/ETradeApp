@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETradeApp.DataAccess
+namespace ETradeApp.Business.DependencyResolvers.Ninject
 {
-    public class Class1
+    class BusinessModule
     {
     }
 }

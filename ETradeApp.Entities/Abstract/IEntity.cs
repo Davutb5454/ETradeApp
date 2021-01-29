@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETradeApp.Business
+namespace ETradeApp.Entities.Abstract
 {
-    public class Class1
+    public interface IEntity
     {
     }
 }
