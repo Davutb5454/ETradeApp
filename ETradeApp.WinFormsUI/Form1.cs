@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using ETradeApp.Business.Abstract;
 using ETradeApp.Business.Concrete;
+using ETradeApp.Business.DependencyResolvers.Ninject;
 using ETradeApp.DataAccess.Concrete.EntityFramework;
 using ETradeApp.Entities.Concrete;
 
@@ -19,8 +20,8 @@ namespace ETradeApp.WinFormsUI
         public Form1()
         {
             InitializeComponent();
-            _productService = new ProductManager(new EfProductDal());
-            _categoryService = new CategoryManager(new EfCategoryDal());
+            _productService = InstanceFactory.GetInstance<IProductService>();
+            _categoryService = InstanceFactory.GetInstance<ICategoryService>();
         }
 
         private IProductService _productService;
